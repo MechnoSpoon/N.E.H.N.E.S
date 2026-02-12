@@ -42,8 +42,8 @@
   <widget class="QLabel" name="titleLabel">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>70</y>
+     <x>160</x>
+     <y>40</y>
      <width>161</width>
      <height>91</height>
     </rect>
@@ -55,10 +55,10 @@
   <widget class="QTextEdit" name="scanResults">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>310</y>
-     <width>104</width>
-     <height>66</height>
+     <x>230</x>
+     <y>290</y>
+     <width>261</width>
+     <height>121</height>
     </rect>
    </property>
    <property name="readOnly">
@@ -68,14 +68,37 @@
   <widget class="QLabel" name="statusLabel">
    <property name="geometry">
     <rect>
-     <x>370</x>
-     <y>110</y>
-     <width>37</width>
-     <height>12</height>
+     <x>160</x>
+     <y>150</y>
+     <width>191</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
     <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="infectedFilesList">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>30</y>
+     <width>201</width>
+     <height>151</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="deleteButton">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>200</y>
+     <width>121</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Delete</string>
    </property>
   </widget>
  </widget>

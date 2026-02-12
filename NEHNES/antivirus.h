@@ -5,6 +5,8 @@
 #include <QString>
 #include <QStringList>
 #include <QMap>
+#include <QPushButton>
+
 
 namespace Ui {
 class Antivirus;
@@ -23,6 +25,7 @@ private slots:
     void onScanProgress(int current, int total);
     void onThreatFound(const QString &fileName, const QString &threatName);
     void onScanComplete();
+    void onDeleteClicked();
 
 private:
     Ui::Antivirus *ui;
