@@ -18,12 +18,15 @@ Antivirus::Antivirus(QWidget *parent)
     loadSignatures();
 
     connect(ui->scanButton, &QPushButton::clicked, this, &Antivirus::onScanClicked);
+    connect(ui->deleteButton, &QPushButton::clicked, this, &Antivirus::onDeleteClicked);
     connect(this, &Antivirus::scanProgress, this, &Antivirus::onScanProgress);
     connect(this, &Antivirus::threatFound, this, &Antivirus::onThreatFound);
     connect(this, &Antivirus::scanComplete, this, &Antivirus::onScanComplete);
 
     ui->progressBar->setValue(0);
     ui->statusLabel->setText("Ready to scan");
+    ui->deleteButton->setEnabled(false);
+    ui->infectedFilesList->clear();
 }
 
 Antivirus::~Antivirus()
@@ -124,7 +127,7 @@ void Antivirus::onScanProgress(int current, int total)
 {
     ui->progressBar->setMaximum(total);
     ui->progressBar->setValue(current);
-    ui->statusLabel->setText(QString("⏳ Scanning... %1 of %2 files").arg(current).arg(total));
+    ui->statusLabel->setText(QString(" Scanning").arg(current).arg(total));
 }
 
 void Antivirus::onThreatFound(const QString &fileName, const QString &threatName)
@@ -149,12 +152,69 @@ void Antivirus::onScanComplete()
     ui->scanResults->append("═══════════════════════════════════════");
 
     if (infected > 0) {
+        ui->deleteButton->setEnabled(false);
         ui->statusLabel->setText(QString("️ Scan complete - %1 threat(s) detected!").arg(infected));
         QMessageBox::warning(this, "Threats Detected",
-                             QString("️ Warning!\n\nFound %1 infected file(s)!").arg(infected));
+                             QString("️ Warning!\n\nFound %1 infected file(s)!\n\nSelect files in the list and click 'Delete Selected Threats' to remove them.").arg(infected));
     } else {
         ui->statusLabel->setText(" Scan complete - No threats detected");
         QMessageBox::information(this, "Scan Complete",
                                  " Good news!\n\nNo threats detected.\nYour system is clean!");
     }
 }
+
+void Antivirus::onDeleteClicked()
+{
+
+    QList<QListWidgetItem*> selectedItems = ui->infectedFilesList->selectedItems();
+
+    if (selectedItems.isEmpty()) {
+        QMessageBox::information(this, "No Selection",
+                                 "please select at least one file to delete from the list");
+        return;
+    }
+
+
+
+    int deletedCount = 0;
+    int failedCount = 0;
+
+    for (QListWidgetItem* item : selectedItems) {
+        QString filePath = item->text();
+        QFile file(filePath);
+
+        if (file.remove()) {
+            deletedCount++;
+            ui->scanResults->append(QString("Deleted: %1").arg(filePath));
+
+            // Remove from the list
+            delete item;
+
+            // Remove from infectedFiles list
+            infectedFiles.removeOne(filePath);
+        } else {
+            failedCount++;
+            ui->scanResults->append(QString(" Failed to delete").arg(filePath));
+        }
+    }
+
+    // Show summary
+    QString summary;
+    if (failedCount == 0) {
+        summary = QString("Successfully deleted %1 infected file(s)!").arg(deletedCount);
+        QMessageBox::information(this, "Deletion Complete", summary);
+    } else {
+        summary = QString("Deleted: %1\nFailed: %2\n\nSome files may be in use or require administrator privileges.").arg(deletedCount).arg(failedCount);
+        QMessageBox::warning(this, "Deletion Incomplete", summary);
+    }
+
+    ui->scanResults->append("");
+    ui->scanResults->append(summary);
+
+    // Disable delete button if no more infected files
+    if (ui->infectedFilesList->count() == 0) {
+        ui->deleteButton->setEnabled(false);
+        ui->statusLabel->setText(" All threats removed!");
+    }
+}
+

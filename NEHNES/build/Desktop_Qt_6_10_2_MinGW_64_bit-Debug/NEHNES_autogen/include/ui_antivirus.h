@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QTextEdit>
@@ -27,6 +28,8 @@ public:
     QLabel *titleLabel;
     QTextEdit *scanResults;
     QLabel *statusLabel;
+    QListWidget *infectedFilesList;
+    QPushButton *deleteButton;
 
     void setupUi(QWidget *Antivirus)
     {
@@ -42,14 +45,20 @@ public:
         progressBar->setValue(24);
         titleLabel = new QLabel(Antivirus);
         titleLabel->setObjectName("titleLabel");
-        titleLabel->setGeometry(QRect(170, 70, 161, 91));
+        titleLabel->setGeometry(QRect(160, 40, 161, 91));
         scanResults = new QTextEdit(Antivirus);
         scanResults->setObjectName("scanResults");
-        scanResults->setGeometry(QRect(290, 310, 104, 66));
+        scanResults->setGeometry(QRect(230, 290, 261, 121));
         scanResults->setReadOnly(true);
         statusLabel = new QLabel(Antivirus);
         statusLabel->setObjectName("statusLabel");
-        statusLabel->setGeometry(QRect(370, 110, 37, 12));
+        statusLabel->setGeometry(QRect(160, 150, 191, 16));
+        infectedFilesList = new QListWidget(Antivirus);
+        infectedFilesList->setObjectName("infectedFilesList");
+        infectedFilesList->setGeometry(QRect(420, 30, 201, 151));
+        deleteButton = new QPushButton(Antivirus);
+        deleteButton->setObjectName("deleteButton");
+        deleteButton->setGeometry(QRect(470, 200, 121, 21));
 
         retranslateUi(Antivirus);
 
@@ -62,6 +71,7 @@ public:
         scanButton->setText(QCoreApplication::translate("Antivirus", "Scan File", nullptr));
         titleLabel->setText(QCoreApplication::translate("Antivirus", "TextLabel", nullptr));
         statusLabel->setText(QCoreApplication::translate("Antivirus", "TextLabel", nullptr));
+        deleteButton->setText(QCoreApplication::translate("Antivirus", "Delete", nullptr));
     } // retranslateUi
 
 };
