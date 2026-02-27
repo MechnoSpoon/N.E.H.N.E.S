@@ -50,42 +50,50 @@ cmake_ninja_workdir = C$:/Users/Cpickell/Documents/NEHNES/build/Desktop_Qt_6_10_
 build cmake_object_order_depends_target_NEHNES: phony || NEHNES_autogen NEHNES_autogen/mocs_compilation.cpp NEHNES_autogen/timestamp NEHNES_autogen_timestamp_deps
 
 build CMakeFiles/NEHNES.dir/NEHNES_autogen/mocs_compilation.cpp.obj: CXX_COMPILER__NEHNES_unscanned_Debug C$:/Users/Cpickell/Documents/NEHNES/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/NEHNES_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_NEHNES
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEFINES = -DHAVE_CLAMAV -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\NEHNES.dir\NEHNES_autogen\mocs_compilation.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Cpickell/Documents/NEHNES/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/NEHNES_autogen/include -isystem C:/Qt/6.10.2/mingw_64/include/QtCore -isystem C:/Qt/6.10.2/mingw_64/include -isystem C:/Qt/6.10.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.2/mingw_64/include/QtGui
+  INCLUDES = -IC:/Users/Cpickell/Documents/NEHNES/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/NEHNES_autogen/include -I"C:/Program Files/ClamAV/include" -I"C:/Program Files/OpenSSL-Win64/include" -isystem C:/Qt/6.10.2/mingw_64/include/QtCore -isystem C:/Qt/6.10.2/mingw_64/include -isystem C:/Qt/6.10.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.2/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\NEHNES.dir
   OBJECT_FILE_DIR = CMakeFiles\NEHNES.dir\NEHNES_autogen
 
 build CMakeFiles/NEHNES.dir/main.cpp.obj: CXX_COMPILER__NEHNES_unscanned_Debug C$:/Users/Cpickell/Documents/NEHNES/main.cpp || cmake_object_order_depends_target_NEHNES
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEFINES = -DHAVE_CLAMAV -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\NEHNES.dir\main.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Cpickell/Documents/NEHNES/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/NEHNES_autogen/include -isystem C:/Qt/6.10.2/mingw_64/include/QtCore -isystem C:/Qt/6.10.2/mingw_64/include -isystem C:/Qt/6.10.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.2/mingw_64/include/QtGui
+  INCLUDES = -IC:/Users/Cpickell/Documents/NEHNES/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/NEHNES_autogen/include -I"C:/Program Files/ClamAV/include" -I"C:/Program Files/OpenSSL-Win64/include" -isystem C:/Qt/6.10.2/mingw_64/include/QtCore -isystem C:/Qt/6.10.2/mingw_64/include -isystem C:/Qt/6.10.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.2/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\NEHNES.dir
   OBJECT_FILE_DIR = CMakeFiles\NEHNES.dir
 
 build CMakeFiles/NEHNES.dir/mainwindow.cpp.obj: CXX_COMPILER__NEHNES_unscanned_Debug C$:/Users/Cpickell/Documents/NEHNES/mainwindow.cpp || cmake_object_order_depends_target_NEHNES
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEFINES = -DHAVE_CLAMAV -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\NEHNES.dir\mainwindow.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Cpickell/Documents/NEHNES/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/NEHNES_autogen/include -isystem C:/Qt/6.10.2/mingw_64/include/QtCore -isystem C:/Qt/6.10.2/mingw_64/include -isystem C:/Qt/6.10.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.2/mingw_64/include/QtGui
+  INCLUDES = -IC:/Users/Cpickell/Documents/NEHNES/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/NEHNES_autogen/include -I"C:/Program Files/ClamAV/include" -I"C:/Program Files/OpenSSL-Win64/include" -isystem C:/Qt/6.10.2/mingw_64/include/QtCore -isystem C:/Qt/6.10.2/mingw_64/include -isystem C:/Qt/6.10.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.2/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\NEHNES.dir
   OBJECT_FILE_DIR = CMakeFiles\NEHNES.dir
 
 build CMakeFiles/NEHNES.dir/settings.cpp.obj: CXX_COMPILER__NEHNES_unscanned_Debug C$:/Users/Cpickell/Documents/NEHNES/settings.cpp || cmake_object_order_depends_target_NEHNES
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEFINES = -DHAVE_CLAMAV -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\NEHNES.dir\settings.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Cpickell/Documents/NEHNES/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/NEHNES_autogen/include -isystem C:/Qt/6.10.2/mingw_64/include/QtCore -isystem C:/Qt/6.10.2/mingw_64/include -isystem C:/Qt/6.10.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.2/mingw_64/include/QtGui
+  INCLUDES = -IC:/Users/Cpickell/Documents/NEHNES/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/NEHNES_autogen/include -I"C:/Program Files/ClamAV/include" -I"C:/Program Files/OpenSSL-Win64/include" -isystem C:/Qt/6.10.2/mingw_64/include/QtCore -isystem C:/Qt/6.10.2/mingw_64/include -isystem C:/Qt/6.10.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.2/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\NEHNES.dir
   OBJECT_FILE_DIR = CMakeFiles\NEHNES.dir
 
 build CMakeFiles/NEHNES.dir/antivirus.cpp.obj: CXX_COMPILER__NEHNES_unscanned_Debug C$:/Users/Cpickell/Documents/NEHNES/antivirus.cpp || cmake_object_order_depends_target_NEHNES
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEFINES = -DHAVE_CLAMAV -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\NEHNES.dir\antivirus.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Cpickell/Documents/NEHNES/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/NEHNES_autogen/include -isystem C:/Qt/6.10.2/mingw_64/include/QtCore -isystem C:/Qt/6.10.2/mingw_64/include -isystem C:/Qt/6.10.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.2/mingw_64/include/QtGui
+  INCLUDES = -IC:/Users/Cpickell/Documents/NEHNES/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/NEHNES_autogen/include -I"C:/Program Files/ClamAV/include" -I"C:/Program Files/OpenSSL-Win64/include" -isystem C:/Qt/6.10.2/mingw_64/include/QtCore -isystem C:/Qt/6.10.2/mingw_64/include -isystem C:/Qt/6.10.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.2/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\NEHNES.dir
+  OBJECT_FILE_DIR = CMakeFiles\NEHNES.dir
+
+build CMakeFiles/NEHNES.dir/antivirusscanner.cpp.obj: CXX_COMPILER__NEHNES_unscanned_Debug C$:/Users/Cpickell/Documents/NEHNES/antivirusscanner.cpp || cmake_object_order_depends_target_NEHNES
+  DEFINES = -DHAVE_CLAMAV -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\NEHNES.dir\antivirusscanner.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Cpickell/Documents/NEHNES/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/NEHNES_autogen/include -I"C:/Program Files/ClamAV/include" -I"C:/Program Files/OpenSSL-Win64/include" -isystem C:/Qt/6.10.2/mingw_64/include/QtCore -isystem C:/Qt/6.10.2/mingw_64/include -isystem C:/Qt/6.10.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.2/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\NEHNES.dir
   OBJECT_FILE_DIR = CMakeFiles\NEHNES.dir
 
@@ -97,12 +105,12 @@ build CMakeFiles/NEHNES.dir/antivirus.cpp.obj: CXX_COMPILER__NEHNES_unscanned_De
 #############################################
 # Link the executable NEHNES.exe
 
-build NEHNES.exe: CXX_EXECUTABLE_LINKER__NEHNES_Debug CMakeFiles/NEHNES.dir/NEHNES_autogen/mocs_compilation.cpp.obj CMakeFiles/NEHNES.dir/main.cpp.obj CMakeFiles/NEHNES.dir/mainwindow.cpp.obj CMakeFiles/NEHNES.dir/settings.cpp.obj CMakeFiles/NEHNES.dir/antivirus.cpp.obj | C$:/Qt/6.10.2/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.10.2/mingw_64/lib/libQt6Gui.a C$:/Qt/6.10.2/mingw_64/lib/libQt6Core.a C$:/Qt/6.10.2/mingw_64/lib/libQt6EntryPoint.a || NEHNES_autogen NEHNES_autogen_timestamp_deps
+build NEHNES.exe: CXX_EXECUTABLE_LINKER__NEHNES_Debug CMakeFiles/NEHNES.dir/NEHNES_autogen/mocs_compilation.cpp.obj CMakeFiles/NEHNES.dir/main.cpp.obj CMakeFiles/NEHNES.dir/mainwindow.cpp.obj CMakeFiles/NEHNES.dir/settings.cpp.obj CMakeFiles/NEHNES.dir/antivirus.cpp.obj CMakeFiles/NEHNES.dir/antivirusscanner.cpp.obj | C$:/Qt/6.10.2/mingw_64/lib/libQt6Widgets.a C$:/Program$ Files/ClamAV/clamav.lib C$:/Program$ Files/OpenSSL-Win64/lib/VC/x64/MD/libssl.lib C$:/Program$ Files/OpenSSL-Win64/lib/VC/x64/MD/libcrypto.lib C$:/Qt/6.10.2/mingw_64/lib/libQt6Gui.a C$:/Qt/6.10.2/mingw_64/lib/libQt6Core.a C$:/Qt/6.10.2/mingw_64/lib/libQt6EntryPoint.a || NEHNES_autogen NEHNES_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
-  LINK_LIBRARIES = C:/Qt/6.10.2/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.10.2/mingw_64/lib/libQt6Gui.a  C:/Qt/6.10.2/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.10.2/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = C:/Qt/6.10.2/mingw_64/lib/libQt6Widgets.a  "C:/Program Files/ClamAV/clamav.lib"  "C:/Program Files/OpenSSL-Win64/lib/VC/x64/MD/libssl.lib"  "C:/Program Files/OpenSSL-Win64/lib/VC/x64/MD/libcrypto.lib"  C:/Qt/6.10.2/mingw_64/lib/libQt6Gui.a  C:/Qt/6.10.2/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.10.2/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\NEHNES.dir
-  POST_BUILD = cd .
+  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Cpickell\Documents\NEHNES\build\Desktop_Qt_6_10_2_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy_if_different "C:/Program Files/ClamAV/libclamav.dll" C:/Users/Cpickell/Documents/NEHNES/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug && cd /D C:\Users\Cpickell\Documents\NEHNES\build\Desktop_Qt_6_10_2_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy_if_different "C:/Program Files/ClamAV/libfreshclam.dll" C:/Users/Cpickell/Documents/NEHNES/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug && cd /D C:\Users\Cpickell\Documents\NEHNES\build\Desktop_Qt_6_10_2_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy_if_different "C:/Program Files/ClamAV/libcrypto-3-x64.dll" C:/Users/Cpickell/Documents/NEHNES/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug && cd /D C:\Users\Cpickell\Documents\NEHNES\build\Desktop_Qt_6_10_2_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy_if_different "C:/Program Files/ClamAV/libssl-3-x64.dll" C:/Users/Cpickell/Documents/NEHNES/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug && cd /D C:\Users\Cpickell\Documents\NEHNES\build\Desktop_Qt_6_10_2_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy_directory "C:/Program Files/ClamAV/certs" C:/Users/Cpickell/Documents/NEHNES/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/certs"
   PRE_LINK = cd .
   TARGET_FILE = NEHNES.exe
   TARGET_IMPLIB = libNEHNES.dll.a

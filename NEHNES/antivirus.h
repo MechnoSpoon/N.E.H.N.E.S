@@ -2,11 +2,9 @@
 #define ANTIVIRUS_H
 
 #include <QDialog>
-#include <QString>
-#include <QStringList>
 #include <QMap>
-#include <QPushButton>
-
+#include <QStringList>
+#include "antivirusscanner.h"
 
 namespace Ui {
 class Antivirus;
@@ -22,29 +20,27 @@ public:
 
 private slots:
     void onScanClicked();
-    void onScanProgress(int current, int total);
-    void onThreatFound(const QString &fileName, const QString &threatName);
-    void onScanComplete();
     void onDeleteClicked();
+    void onDeleteAllClicked();
+    void onScanProgress(int current, int total);
+    void onThreatFound(QString fileName, QString threatName);
+    void onScanComplete();
 
 private:
     Ui::Antivirus *ui;
+    AntivirusScanner *scanner;
 
-    // Built-in scanner functionality
+    // ClamAV engine
+    struct cl_engine *clamEngine;
+
     QMap<QString, QString> virusSignatures;
     QStringList infectedFiles;
     int totalScanned;
 
-    // Scanner methods
     void loadSignatures();
-    bool scanFile(const QString &filePath);
-    void scanDirectory(const QString &dirPath);
-    void scanFileRecursive(const QString &path, QStringList &allFiles);
-
-signals:
-    void scanProgress(int current, int total);
-    void threatFound(const QString &fileName, const QString &threatName);
-    void scanComplete();
+    void initializeClamAV();
+    void cleanupClamAV();
+    QStringList getAllFilesRecursive(const QString &path);
 };
 
-#endif
+#endif // ANTIVIRUS_H
